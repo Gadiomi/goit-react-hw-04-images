@@ -10,13 +10,13 @@ const ModalRoot = document.querySelector('#ModalRoot');
 const Modal = ({ onClose, image }) => {
   useEffect(() => {
     return window.addEventListener('keydown', keyDown);
-  }, []);
+  });
 
   useLayoutEffect(() => {
     return () => {
       window.removeEventListener('keydown', keyDown);
     };
-  }, []);
+  });
 
   const keyDown = e => {
     if (e.code === 'Escape') {
